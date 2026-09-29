@@ -16,7 +16,10 @@ def search_phone_number(phonebook, name):
   except KeyError:
     return "No matches found."
 
+def list_contacts(phonebook):
+  for contact, number in phonebook.items():
+    print(f"{contact}: {number}")
+
 phonebook = create_phonebook()
 
-print(search_phone_number(phonebook, "Hapi"))
-print(search_phone_number(phonebook, "Erik"))
+list_contacts(phonebook)
