@@ -29,7 +29,14 @@ def update_number(phonebook, name, new_number):
   else:
     return "No matches found."
 
+def remove_contact(phonebook, name):
+  try:
+    phonebook.pop(name)
+  except KeyError:
+    return "No contact matching that name was found."
+
 phonebook = create_phonebook()
 
+print(remove_contact(phonebook, "Hapi"))
 
-print(update_number(phonebook, "Anders", "80085"))
+print(phonebook)
