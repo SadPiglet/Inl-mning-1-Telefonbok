@@ -20,6 +20,16 @@ def list_contacts(phonebook):
   for contact, number in phonebook.items():
     print(f"{contact}: {number}")
 
+def add_contact(phonebook, name, number):
+  phonebook[name] = number
+
+def update_number(phonebook, name, new_number):
+  if name in phonebook:
+    phonebook[name] = new_number
+  else:
+    return "No matches found."
+
 phonebook = create_phonebook()
 
-list_contacts(phonebook)
+
+print(update_number(phonebook, "Anders", "80085"))
