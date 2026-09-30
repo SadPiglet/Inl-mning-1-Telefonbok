@@ -39,5 +39,11 @@ while True:
     pb.update_number(phonebook, name, new_number)
     input("Press enter to return to the menu...")
 
+  elif choice == "5":
+    name = input("Enter name of contact to remove: ")
+
+    pb.remove_contact(phonebook, name)
+    input("Press enter to return to the menu...")
+
   elif choice == "6":
     break

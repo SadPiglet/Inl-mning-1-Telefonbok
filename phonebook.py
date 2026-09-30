@@ -56,6 +56,7 @@ def update_number(phonebook, name, new_number):
 def remove_contact(phonebook, name):
   try:
     phonebook.pop(name)
+    print("Contact was removed successfully!")
   except KeyError:
-    return "No contact matching that name was found."
+    print ("No contact matching that name was found.")
 
