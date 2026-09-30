@@ -32,5 +32,12 @@ while True:
     pb.add_contact(phonebook, name, number)
     input("Press enter to return to the menu...")
 
+  elif choice == "4":
+    name = input("Enter a name: ")
+    new_number = input("Enter the updated number: ")
+
+    pb.update_number(phonebook, name, new_number)
+    input("Press enter to return to the menu...")
+
   elif choice == "6":
     break

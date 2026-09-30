@@ -45,14 +45,13 @@ def add_contact(phonebook, name, number):
     phonebook[name] = number
     print("Contact added successfully!")
       
-  
-   
 
 def update_number(phonebook, name, new_number):
   if name in phonebook:
     phonebook[name] = new_number
+    print("Contact was updated successfully!")
   else:
-    return "No contact matching that name was found."
+    print ("No contact matching that name was found.")
 
 def remove_contact(phonebook, name):
   try:
