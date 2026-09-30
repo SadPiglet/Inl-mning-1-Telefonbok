@@ -32,7 +32,7 @@ def add_contact(phonebook, name, number):
 
   elif name in phonebook:
     print(f"{name} already exists.")
-    answer = input("Do you want to update the phone number? (y/n):")
+    answer = input("Do you want to update the phone number? (y/n):").lower()
 
     if answer == "y":
       phonebook[name] = number
@@ -51,12 +51,11 @@ def update_number(phonebook, name, new_number):
     phonebook[name] = new_number
     print("Contact was updated successfully!")
   else:
-    print ("No contact matching that name was found.")
+    print("No contact matching that name was found.")
 
 def remove_contact(phonebook, name):
   try:
     phonebook.pop(name)
     print("Contact was removed successfully!")
   except KeyError:
-    print ("No contact matching that name was found.")
-
+    print("No contact matching that name was found.")

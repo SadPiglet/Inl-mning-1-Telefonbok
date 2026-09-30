@@ -21,29 +21,33 @@ while True:
     input("Press enter to return to the menu...")
 
   elif choice == "2":
-    name = input("Enter a name: ")
+    name = input("Enter a name: ").capitalize()
     print(pb.search_phone_number(phonebook, name))
     input("Press enter to return to the menu...")
 
   elif choice == "3":
-    name = input("Enter a name for your new contact: ")
+    name = input("Enter a name for your new contact: ").capitalize()
     number = input("Enter a number for your new contact: ")
 
     pb.add_contact(phonebook, name, number)
     input("Press enter to return to the menu...")
 
   elif choice == "4":
-    name = input("Enter a name: ")
+    name = input("Enter a name: ").capitalize()
     new_number = input("Enter the updated number: ")
 
     pb.update_number(phonebook, name, new_number)
     input("Press enter to return to the menu...")
 
   elif choice == "5":
-    name = input("Enter name of contact to remove: ")
+    name = input("Enter name of contact to remove: ").capitalize()
 
     pb.remove_contact(phonebook, name)
     input("Press enter to return to the menu...")
 
   elif choice == "6":
     break
+
+  else:
+    print("Invalid choice. Try again!")
+    input("Press enter to return to the menu...")
